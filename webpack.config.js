@@ -6,10 +6,10 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.join(__dirname, 'build'),
-       filename: 'index.js'
+    filename: 'index.js'
   },
   externals: {
-    // 'React': 'react'
+    'React': 'react'
   },
   module: {
     rules: [{
