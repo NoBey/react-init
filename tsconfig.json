@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "module": "ES2015",
+    "target": "ES2017",
+    "sourceMap": false,
+    "jsx": "react"
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

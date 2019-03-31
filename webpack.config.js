@@ -3,21 +3,17 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    index: './src/main.js',
+    index: './src/main',
   },
   output: {
     path: path.join(__dirname, 'build'),
     filename: 'index.js'
   },
   module: {
-    rules: [{
-      test: /\.js(.*)$/,
-      loader: "babel-loader",
-      exclude: /node_modules/,
-      options: {
-        presets: ['latest', 'stage-0', 'react']
-      }
-    }]
+    rules: [ { test: /\.tsx?$/, loader: "ts-loader" }]
+  },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"]
   },
   devServer: {
     compress: true,
