@@ -1,29 +1,26 @@
 
-const path = require('path')
-const webpack = require('webpack')
+const path = require('path');
 
 module.exports = {
-  entry: './src/main.js',
+  entry: {
+    index: './src/main.js',
+  },
   output: {
     path: path.join(__dirname, 'build'),
     filename: 'index.js'
   },
-  externals: {
-    'React': 'react'
-  },
   module: {
     rules: [{
-          test: /\.js(.*)$/,
-          loader: "babel-loader",
-          exclude: /node_modules/,
-          options: {
-            presets: ['latest', 'stage-0', 'react']
-          }
-        }]
+      test: /\.js(.*)$/,
+      loader: "babel-loader",
+      exclude: /node_modules/,
+      options: {
+        presets: ['latest', 'stage-0', 'react']
+      }
+    }]
   },
   devServer: {
-  contentBase: path.join(__dirname, "build"),
-  compress: true,
-  port: 9000
-}
+    compress: true,
+    port: 9000,
+  }
 }
