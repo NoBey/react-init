@@ -16,6 +16,7 @@ import zhCN from "antd/es/locale/zh_CN";
 import Index from "@/pages/index";
 import About from "@/pages/index";
 import Inbox from "@/pages/index";
+import Edit from "@/pages/edit";
 import Message from "@/pages/index";
 
 const App = props => (
@@ -40,6 +41,9 @@ ReactDOM.render(
         </Route>
         <Route path="/inbox">
           <Inbox />
+        </Route>
+        <Route path="/edit">
+          <Edit />
         </Route>
       </Switch>
     </App>
